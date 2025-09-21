@@ -8,28 +8,76 @@
     <title>Vite App</title>
   </head>
   <body>
-    <div class="container mx-auto px-48 py-8">
+    <div class="flex flex-col justify-center items-center h-screen gap-4">
       <h1 class="text-3xl font-bold underline">Welcome to UserBook!</h1>
       <form class="flex flex-col gap-4 mt-8">
-        <input
-          type="text"
-          placeholder="First Name"
-          class="border border-gray-300 rounded px-2 py-1"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Last Name"
-          class="border border-gray-300 rounded px-2 py-1"
-        />
+        <div>
+          <input
+            type="text"
+            placeholder="First Name"
+            class="border border-gray-300 rounded px-2 py-1"
+            required
+          />
+          <input
+            type="text"
+            placeholder="Last Name"
+            class="border border-gray-300 rounded px-2 py-1"
+          />
+        </div>
         <input
           type="email"
           placeholder="Email"
           class="border border-gray-300 rounded px-2 py-1"
         />
-        <button type="submit" class="bg-blue-500 text-white rounded px-4 py-2">
-          Submit
-        </button>
+        <input
+          type="text"
+          placeholder="Address"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <input
+          type="text"
+          placeholder="State"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <input
+          type="text"
+          placeholder="Country"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <input
+          type="number"
+          placeholder="Zip Code"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <input
+          type="number"
+          placeholder="Phone Number"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <fieldset>
+          <legend>Gender:</legend>
+
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="male">Male</label><br />
+
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="female">Female</label><br />
+
+          <input type="radio" id="other" name="gender" value="other" />
+          <label for="other">Other</label>
+        </fieldset>
+        <div>
+          <button type="reset" class="text-blue-700 rounded px-4 py-2">
+            Clear
+          </button>
+
+          <button
+            type="submit"
+            class="flex justify-end bg-blue-500 text-white rounded px-4 py-2"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </div>
     <script type="module" src="/main.js"></script>
