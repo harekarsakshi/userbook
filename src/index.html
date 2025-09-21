@@ -22,37 +22,57 @@
             type="text"
             placeholder="Last Name"
             class="border border-gray-300 rounded px-2 py-1"
+            required
           />
         </div>
         <input
           type="email"
           placeholder="Email"
           class="border border-gray-300 rounded px-2 py-1"
+          required
         />
         <input
           type="text"
           placeholder="Address"
           class="border border-gray-300 rounded px-2 py-1"
         />
-        <input
-          type="text"
-          placeholder="State"
+        <label for="state" class="sr-only">State</label>
+        <select
+          id="state"
+          name="state"
           class="border border-gray-300 rounded px-2 py-1"
-        />
-        <input
-          type="text"
-          placeholder="Country"
+          required
+        >
+          <option value="" disabled selected>Choose State</option>
+          <option value="CA">California</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="NY">New York</option>
+        </select>
+      
+        <label for="Country" class="sr-only">Country</label>
+        <select
+          id="Country"
+          name="Country"
           class="border border-gray-300 rounded px-2 py-1"
-        />
+          required
+        >
+         <option value="" disabled selected>Choose Country</option>
+          <option value="US">USA</option>
+          <option value="CD">Canada</option>
+          <option value="IN">India</option>
+          <option value="MX">Mexico</option>
         <input
           type="number"
           placeholder="Zip Code"
           class="border border-gray-300 rounded px-2 py-1"
+          required
         />
         <input
           type="number"
           placeholder="Phone Number"
           class="border border-gray-300 rounded px-2 py-1"
+          required
         />
         <fieldset>
           <legend>Gender:</legend>
@@ -66,14 +86,14 @@
           <input type="radio" id="other" name="gender" value="other" />
           <label for="other">Other</label>
         </fieldset>
-        <div>
+        <div class="flex justify-between mt-4">
           <button type="reset" class="text-blue-700 rounded px-4 py-2">
             Clear
           </button>
 
           <button
             type="submit"
-            class="flex justify-end bg-blue-500 text-white rounded px-4 py-2"
+            class="bg-blue-500 text-white rounded px-4 py-2"
           >
             Submit
           </button>
