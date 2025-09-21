@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="container mx-auto px-48 py-8">
+      <h1 class="text-3xl font-bold underline">Welcome to UserBook!</h1>
+      <form class="flex flex-col gap-4 mt-8">
+        <input
+          type="text"
+          placeholder="First Name"
+          class="border border-gray-300 rounded px-2 py-1"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Last Name"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          class="border border-gray-300 rounded px-2 py-1"
+        />
+        <button type="submit" class="bg-blue-500 text-white rounded px-4 py-2">
+          Submit
+        </button>
+      </form>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
