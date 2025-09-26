@@ -5,101 +5,42 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link href="/style.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>UserBook</title>
   </head>
   <body>
     <div class="flex flex-col justify-center items-center h-screen gap-4">
-      <h1 class="text-3xl font-bold underline">Welcome to UserBook!</h1>
-      <form class="flex flex-col gap-4 mt-8">
-        <div>
-          <input
-            type="text"
-            placeholder="First Name"
-            class="border border-gray-300 rounded px-2 py-1"
-            required
-          />
-          <input
-            type="text"
-            placeholder="Last Name"
-            class="border border-gray-300 rounded px-2 py-1"
-            required
-          />
-        </div>
-        <input
-          type="email"
-          placeholder="Email"
-          class="border border-gray-300 rounded px-2 py-1"
-          required
-        />
-        <input
-          type="text"
-          placeholder="Address"
-          class="border border-gray-300 rounded px-2 py-1"
-        />
-        <label for="state" class="sr-only">State</label>
-        <select
-          id="state"
-          name="state"
-          class="border border-gray-300 rounded px-2 py-1"
-          required
-        >
-          <option value="" disabled selected>Choose State</option>
-          <option value="CA">California</option>
-          <option value="FL">Florida</option>
-          <option value="GA">Georgia</option>
-          <option value="NY">New York</option>
-        </select>
-      
-        <label for="Country" class="sr-only">Country</label>
-        <select
-          id="Country"
-          name="Country"
-          class="border border-gray-300 rounded px-2 py-1"
-          required
-        >
-         <option value="" disabled selected>Choose Country</option>
-          <option value="US">USA</option>
-          <option value="CD">Canada</option>
-          <option value="IN">India</option>
-          <option value="MX">Mexico</option>
-        <input
-          type="number"
-          placeholder="Zip Code"
-          class="border border-gray-300 rounded px-2 py-1"
-          required
-        />
-        <input
-          type="number"
-          placeholder="Phone Number"
-          class="border border-gray-300 rounded px-2 py-1"
-          required
-        />
-        <fieldset>
-          <legend>Gender:</legend>
+      <h1 class="text-3xl font-bold">Welcome to UserBook</h1>
+     <h2 class="text-2xl font-semibold mb-4 underline">User's List</h2>
+     <div class="overflow-x-auto">
+      <table>
+  <thead class="border-separate border-spacing-2 border border-gray-300">
+    <tr class="bg-gray-100 border-b border-gray-300">
+      <th class="text-left py-2 px-4 font-medium text-gray-700 border-r border-gray-300">First Name</th>
+      <th class="text-left py-2 px-4 font-medium text-gray-700 border-r border-gray-300">Last Name</th>
+      <th class="text-left py-2 px-4 font-medium text-gray-700 border-r border-gray-300">Country</th>
+      <th class="text-left py-2 px-4 font-medium text-gray-700 border-r border-gray-300">Actions</th>
+    </tr>
+  </thead>
+  <tbody id="users-list" >
+     <tr class="border-b border-gray-200 hover:bg-gray-50">
+      <td  class="py-2 px-4 space-x-2">
+            <button class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition">✏️</button>
+            <button class="bg-blue-500 text-white px-3 py-1 rounded-lg text-sm hover:bg-blue-600 transition">🗑</button>
+          </td>
+     </tr>
+  </tbody>
+</table>
+</div>
 
-          <input type="radio" id="male" name="gender" value="male" />
-          <label for="male">Male</label><br />
-
-          <input type="radio" id="female" name="gender" value="female" />
-          <label for="female">Female</label><br />
-
-          <input type="radio" id="other" name="gender" value="other" />
-          <label for="other">Other</label>
-        </fieldset>
-        <div class="flex justify-between mt-4">
-          <button type="reset" class="text-blue-700 rounded px-4 py-2">
-            Clear
-          </button>
-
-          <button
-            type="submit"
-            class="bg-blue-500 text-white rounded px-4 py-2"
-          >
-            Submit
-          </button>
-        </div>
-      </form>
+      <p class="mt-4">
+        This is the homepage. Click the button below to add a new user.
+      </p>
+      <a href="/form.html">
+        <button class="mt-6 bg-blue-500 text-white rounded px-4 py-2">
+          Add User
+        </button>
+      </a>
     </div>
-    <script type="module" src="/main.js"></script>
+  <script src="homepage.js"></script>
   </body>
 </html>
